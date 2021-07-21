@@ -225,7 +225,6 @@ namespace DVTestMod
                     }
                     //PlayerManager.TeleportPlayer(PlayerManager.GetWorldAbsolutePlayerPosition(), rotation, PlayerManager.PlayerCamera.transform, true);
                     //PlayerManager.PlayerCamera.transform.Rotate(new Vector3(floats[0], floats[1], floats[2]));
-                    //PlayerManager.PlayerCamera.transform.Rotate(new Vector3(floats[0], floats[1], floats[2]));
                     //PlayerManager.SetPlayer(PlayerManager.PlayerCamera.transform, PlayerManager.PlayerCamera);
                     return true;
                 }
