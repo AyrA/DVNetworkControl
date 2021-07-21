@@ -23,7 +23,7 @@ namespace DVNetworkControl
             if (!init)
             {
                 listener = new UdpClient(new IPEndPoint(IPAddress.Loopback, 31337));
-                listener.BeginReceive(dataIn, null);
+                listener.BeginReceive(DataIn, null);
                 init = true;
                 PlayerManager.CarChanged += PlayerManager_CarChanged;
                 Debug.LogWarning($"{nameof(TestModClass)} {Assembly.GetExecutingAssembly().GetName().Version} initialized");
@@ -42,7 +42,7 @@ namespace DVNetworkControl
             }
         }
 
-        private static void dataIn(IAsyncResult ar)
+        private static void DataIn(IAsyncResult ar)
         {
             if (init)
             {
@@ -57,7 +57,7 @@ namespace DVNetworkControl
                     Debug.LogWarning($"{nameof(TestModClass)}: Socket error");
                 }
                 ProcessPacket(data, remoteEP);
-                listener.BeginReceive(dataIn, null);
+                listener.BeginReceive(DataIn, null);
             }
         }
 
@@ -121,7 +121,7 @@ namespace DVNetworkControl
                                 //Basic loco stats that apply to all locos
                                 List<string> BasicStats = new List<string>(new string[] {
                                     $"LOCO={CurrentLoco.name}",
-                                    $"TYPE={CurrentLoco.train.carType.ToString()}",
+                                    $"TYPE={CurrentLoco.train.carType}",
                                     $"THROTTLE={CurrentLoco.throttle}",
                                     $"INDEPENDENTBRAKE={CurrentLoco.independentBrake}",
                                     $"TRAINBRAKE={CurrentLoco.brake}",
