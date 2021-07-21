@@ -1,6 +1,6 @@
 ﻿using UnityModManagerNet;
 
-namespace DVTestMod
+namespace DVNetworkControl
 {
     [EnableReloading]
     static class Main

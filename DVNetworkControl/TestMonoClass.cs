@@ -9,7 +9,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace DVTestMod
+namespace DVNetworkControl
 {
     public static class TestModClass
     {
